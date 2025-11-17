@@ -4,7 +4,7 @@ import pandas as pd
 # "as" para apelidar a biblioteca
 
 # df quer dizer data frame
-df_alunos = pd.read_csv("alunos.csv", sep= ',', encoding='utf-8')
+df_alunos = pd.read_csv("alunos.csv", sep= ",", encoding='utf-8')
 # pd.read_csv -  faz com que o pandas leia o arquivo csv para Python
 # Caso o separador não é "," você arruma com o argumento sep = ''
 # Caso ele não reconheça os operadores digitados, alteramos com o arg encoding = ''
@@ -24,7 +24,7 @@ df_alunos = pd.concat([df_alunos, pd.DataFrame([novo_aluno])], ignore_index=True
 
 
 # Salvar a info
-df_alunos.to_csv("alunos.csv", index=False)
+df_alunos.to_csv("alunos.csv", index=False, sep=",")
 #df_alunos.to_csv("alunos.csv", index=False) → salva o DataFrame atualizado no arquivo CSV sem incluir a coluna de índices.
 
 # DICIONÁRIO
